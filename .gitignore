@@ -1,0 +1,178 @@
+# --- OS & éditeurs ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
+# --- Secrets & config locale ---
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+**/key.properties
+**/*.keystore
+**/*.jks
+**/serviceAccount*.json
+**/firebase-adminsdk*.json
+
+# Config Firebase (à regénérer avec flutterfire configure / fichiers fournis par la console)
+**/google-services.json
+**/GoogleService-Info.plist
+
+# --- Archives & exports volumineux (GitHub : max 100 Mo/fichier) ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.gz
+
+# --- Python (entraînement & scripts dataset) ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+!recoplant/android/build.gradle
+!recoplant/android/app/build.gradle
+
+# Jupyter
+.profile_default/
+
+# --- Données & checkpoints ML (volumineux) ---
+data/
+**/data/plantnet*/
+**/data/PlantNet*/
+**/data/flavia*/
+**/data/PlantVillage/
+
+# CSV / métadonnées dataset (ex. PlantCLEF ~750 Mo)
+*PlantCLEF*
+**/*PlantCLEF*
+**/*trainingdata*.csv
+**/*singleplant*.csv
+dataset_cleaning_report.csv
+*.csv
+!per_class_accuracy.csv
+
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.hdf5
+*.pb
+*.safetensors
+*.pkl
+*.pickle
+
+# TorchScript / TFLite hors assets de l'app
+*.pt
+!recoplant/assets/models/*.pt
+*.tflite
+!recoplant/assets/models/*.tflite
+
+# Sorties d'entraînement / évaluation
+runs/
+logs/
+wandb/
+mlruns/
+tensorboard/
+checkpoints/
+saved_models/
+model_final/*.png
+model_final/*.jpg
+model_final/*.pdf
+
+# Graphiques & images de test à la racine du dépôt
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.gif
+/[0-9]*.jpg
+/[0-9]*.webp
+
+# Dossier test maladies (images locales ; les .py restent versionnables)
+deaseaseModel/*
+!deaseaseModel/*.py
+
+# Projet Flutter secondaire / brouillon (doublon de recoplant/)
+recoplant/tes_app/
+
+# --- Flutter / Dart (recoplant) ---
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/build/
+**/coverage/
+**/doc/api/
+**/.fvm/
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/ephemeral/
+**/ios/Pods/
+**/ios/**/DerivedData/
+**/ios/**/*.xcuserstate
+**/ios/**/xcuserdata/
+**/macos/Flutter/ephemeral/
+**/.cxx/
+app.*.symbols
+app.*.map.json
+*.dill
+
+# Android (généré localement)
+**/android/local.properties
+**/android/.gradle/
+**/android/captures/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# --- Binaires mobile & desktop ---
+*.apk
+*.aab
+*.ipa
+*.app
+*.dmg
+*.exe
+*.dll
+*.dSYM.zip
+
+# --- Firebase (logs locaux) ---
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log
+
+# --- Divers ---
+*.log
+*.class
+migrate_working_dir/
+*.stackdump
